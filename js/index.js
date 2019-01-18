@@ -21,7 +21,7 @@ function displayBranches() {
     .map(
       branch =>
         '<li><strong>' +
-        branch.name
+        branch.name +
         '</li>'
     )
     .join('')}</ul>`;
