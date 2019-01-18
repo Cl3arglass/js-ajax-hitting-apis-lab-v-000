@@ -73,3 +73,11 @@ function getCommits(el) {
   req.open('GET', 'https://api.github.com/repos/octocat/Spoon-Knife/commits');
   req.send();
 }
+
+function getBranches(el) {
+  const name = el.dataset.repo;
+  const req = new XMLHttpRequest();
+  req.addEventListener('load', displayBranches);
+  req.open('GET', 'https://api.github.com/repos/octocat/Spoon-Knife/branches');
+  req.send();
+}
