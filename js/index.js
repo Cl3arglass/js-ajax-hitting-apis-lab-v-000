@@ -26,5 +26,19 @@ function displayBranches() {
     )
     .join('')}</ul>`;
   document.getElementById('details').innerHTML = branchesList;
+}
 
+function displayRepositories() {
+  const repos = JSON.parse(this.responseText);
+  const reposList = `<ul>${repos
+    .map(
+      repo =>
+        '<li><strong>' +
+        repo.name +
+        repo.owner.login +
+        repo.html_url +
+        '</li>'
+    )
+    .join('')}</ul>`;
+  document.getElementById('repositories').innerHTML = reposList;
 }
