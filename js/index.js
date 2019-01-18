@@ -16,5 +16,18 @@ function displayCommits() {
 }
 
 function displayBranches() {
-  
+  const branches = JSON.parse(this.responseText);
+  const branchessList = `<ul>${branches
+    .map(
+      branch =>
+        '<li><strong>' +
+        commit.commit.author.name +
+        commit.author.login +
+        '</strong> - ' +
+        commit.commit.message +
+        '</li>'
+    )
+    .join('')}</ul>`;
+  document.getElementById('details').innerHTML = commitsList;
+}
 }
