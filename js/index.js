@@ -14,3 +14,7 @@ function displayCommits() {
     .join('')}</ul>`;
   document.getElementById('details').innerHTML = commitsList;
 }
+
+function displayBranches() {
+  
+}
