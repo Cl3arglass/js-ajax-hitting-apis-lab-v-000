@@ -26,5 +26,5 @@ function displayBranches() {
     )
     .join('')}</ul>`;
   document.getElementById('details').innerHTML += branchesList;
-}
+
 }
