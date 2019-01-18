@@ -5,7 +5,7 @@ function displayCommits() {
     .map(
       commit =>
         '<li><strong>' +
-        commit.author.owner +
+        commit.full_name +
         '</strong> - ' +
         commit.author.login +
         '</strong> - ' +
